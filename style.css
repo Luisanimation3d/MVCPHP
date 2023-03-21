@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+}
+
 form{
     width: 40%;
     margin: 20px auto;
@@ -69,4 +77,61 @@ form button{
 form button:hover{
     background-color: #003cff;
     color: #fff;
+}
+
+table{
+    min-width: 80%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #003cff;
+}
+
+th{
+    padding: .5rem 0;
+    color: #fff;
+    font-weight: bolder;
+}
+
+td{
+    padding: .5rem .5rem;
+}
+
+tbody tr{
+    border-bottom: 1px solid #757575;
+}
+
+td a{
+    text-decoration: none;
+    color: #003cff;
+    border: 2px solid #003cff;
+    padding: .2rem .5rem;
+    font-weight: bolder;
+    transition: all .5s ease-in-out;
+}
+
+td a:hover{
+    color: #fff;
+    background-color: #003cff;
+}
+
+td:has(a){
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.eliminar{
+    text-decoration: none;
+    color: red;
+    border: 2px solid red;
+    padding: .2rem .5rem;
+    font-weight: bolder;
+    transition: all .5s ease-in-out;
+}
+
+td .eliminar:hover{
+    color: #fff;
+    background-color: red;
 }

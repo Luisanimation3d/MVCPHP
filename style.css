@@ -5,11 +5,29 @@
 }
 
 .container{
-    width: 100%;
+    width: 80%;
+    margin: auto;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding: 3rem 0;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.linkCrear{
+    text-decoration: none;
+    font-weight: bold;
+    color: #169b05;
+    border: 2px solid #169b05;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.linkCrear:hover{
+    background: #169b05;
+    color: #fff;
 }
 
 form{
@@ -80,7 +98,7 @@ form button:hover{
 }
 
 table{
-    min-width: 80%;
+    min-width: 100%;
     border-collapse: collapse;
 }
 
@@ -96,6 +114,7 @@ th{
 
 td{
     padding: .5rem .5rem;
+    text-align: center;
 }
 
 tbody tr{
@@ -134,4 +153,92 @@ td:has(a){
 td .eliminar:hover{
     color: #fff;
     background-color: red;
+}
+
+/* Modal */
+
+.hideModal {
+    display: none;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button{
+    cursor: pointer;
+}
+
+.showModal{
+    background: rgba(0,0,0,.5);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background: #fff;
+    width: 40%;
+    min-width: 300px;
+    height: 30%;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    padding: 3rem 0;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    border-radius: 50px;
+}
+
+.contentModal{
+    font-size: 3.5rem;
+    width: 80%;
+    text-align: center;
+}
+
+.footerModal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 1rem;
+    gap: 2rem;
+}
+
+
+.footerModal a{
+    background: #169b05;
+    color: #fff;
+    padding: .8rem 3rem;
+    border-radius: 50px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.footerModal a:hover,
+.footerModal button.cancelar:hover{
+    filter: brightness(50%);
+}
+
+.footerModal button.cancelar{
+    background-color: red;
+    border: 2px solid red;
+    color: #fff;
+    padding: .8rem 3rem;
+    border-radius: 50px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
 }

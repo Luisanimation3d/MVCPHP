@@ -17,21 +17,22 @@ $data = $consulta->fetch(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="./registrarProveedor.php" method="post">
+    <form action="./modificarProveedor.php" method="post">
         <h1>REGISTRAR PROVEEDOR</h1>
+        <input type="hidden" name="id" value="<?php echo $id ?>">
         <div class="inputContainer">
             <input type="text" name="nombre" id="nombre" placeholder="nombre" value="<?php echo $data['nombre'] ?>">
             <label for="nombre">Nombre</label>
         </div>
         <div class="inputContainer">
-            <input type="number" name="telefono" id="telefono" placeholder="telefono">
+            <input type="number" name="telefono" id="telefono" placeholder="telefono" value="<?php echo $data['telefono'] ?>">
             <label for="telefono">Telefono</label>
         </div>
         <div class="inputContainer">
-            <input type="text" name="nit" id="nit" placeholder="nit">
+            <input type="text" name="nit" id="nit" placeholder="nit" value="<?php echo $data['nit'] ?>">
             <label for="nit">NIT</label>
         </div>
-        <button type="submit">Registrar PROVEEDOR</button>
+        <button type="submit">MODIFICAR PROVEEDOR</button>
     </form>
 </body>
 </html>

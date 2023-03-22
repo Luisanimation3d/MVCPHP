@@ -10,7 +10,7 @@ $registrar = $db->prepare('INSERT INTO proveedor (nombre,telefono,nit) VALUES (?
 
 $registrar->execute([$nombre,$telefono,$nit]);
 
-header('location: formularioCrear.php');
+header('location: index.php');
 
 exit();
 
